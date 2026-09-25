@@ -1,0 +1,51 @@
+/* Base Font Family Defaults */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Force Font Family Rules across Preview Elements (* wildcard forces children override) */
+#resumePreview.font-inter, #resumePreview.font-inter * { font-family: 'Inter', sans-serif !important; }
+#resumePreview.font-merriweather, #resumePreview.font-merriweather * { font-family: 'Merriweather', serif !important; }
+#resumePreview.font-roboto, #resumePreview.font-roboto * { font-family: 'Roboto', sans-serif !important; }
+#resumePreview.font-playfair, #resumePreview.font-playfair * { font-family: 'Playfair Display', serif !important; }
+#resumePreview.font-montserrat, #resumePreview.font-montserrat * { font-family: 'Montserrat', sans-serif !important; }
+#resumePreview.font-lora, #resumePreview.font-lora * { font-family: 'Lora', serif !important; }
+#resumePreview.font-poppins, #resumePreview.font-poppins * { font-family: 'Poppins', sans-serif !important; }
+#resumePreview.font-opensans, #resumePreview.font-opensans * { font-family: 'Open Sans', sans-serif !important; }
+#resumePreview.font-oswald, #resumePreview.font-oswald * { font-family: 'Oswald', sans-serif !important; }
+#resumePreview.font-lato, #resumePreview.font-lato * { font-family: 'Lato', sans-serif !important; }
+
+/* Interactive Live-Editing Visual Indicators */
+[contenteditable="true"]:hover {
+  outline: 1px dashed #2563eb;
+  background-color: #eff6ff;
+  border-radius: 2px;
+  cursor: text;
+}
+
+[contenteditable="true"]:focus {
+  outline: 2px solid #1d4ed8;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+/* Print Setup for Window Print fallback */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background-color: white !important;
+  }
+  #resumePreview {
+    box-shadow: none !important;
+    border: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  [contenteditable="true"] {
+    outline: none !important;
+    background-color: transparent !important;
+  }
+}
